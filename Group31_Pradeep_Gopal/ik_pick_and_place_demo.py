@@ -360,14 +360,14 @@ def main():
     orientation=overhead_orientation))
 
 
-    overhead_orientation = Quaternion(
-                             x=-0.0245713739562,
-                             y=0.999677893837,
-                             z=0.00544724340788,
-                             w= 0.00326859231625)
-    block_poses.append(Pose(
-    position=Point(x= 0.161454197308, y=1.03697546724, z=0.138005773416),
-    orientation=overhead_orientation))
+    # overhead_orientation = Quaternion(
+    #                          x=-0.0245713739562,
+    #                          y=0.999677893837,
+    #                          z=0.00544724340788,
+    #                          w= 0.00326859231625)
+    # block_poses.append(Pose(
+    # position=Point(x= 0.161454197308, y=1.03697546724, z=0.138005773416),
+    # orientation=overhead_orientation))
 
 
 
@@ -388,9 +388,9 @@ def main():
     position=Point(x= 0.32, y=0.82, z=-0.149),
     orientation=overhead_orientation))
 
-    block_poses.append(Pose(
-    position=Point(x= 0.552721479426, y=0.868394670121, z=0.225982144547),
-    orientation=overhead_orientation))
+    # block_poses.append(Pose(
+    # position=Point(x= 0.552721479426, y=0.868394670121, z=0.225982144547),
+    # orientation=overhead_orientation))
 
     block_poses.append(Pose(
     position=Point(x= 0.635649852585, y=0.4137772193, z=0.206570161845),
@@ -412,41 +412,47 @@ def main():
 
     idx = 0
     # while not rospy.is_shutdown():
-    print("\nPicking...")
+    print("Heyyyyyyyyyyyyyyyy0")
     pnp.pick(block_poses[idx])
 
     idx = idx + 1
+    print("Heyyyyyyyyyyyyyyyy1")
     pnp._approach(block_poses[idx])
 
 
     idx = idx + 1
+    print("Heyyyyyyyyyyyyyyyy2")
     pnp._approach(block_poses[idx])
 
-    idx = idx + 1
-    pnp._approach(block_poses[idx])
+    # idx = idx + 1
+    # print("Heyyyyyyyyyyyyyyyy3")
+    # pnp._approach(block_poses[idx])
 
     idx = idx + 1
-    print("\nPlacing...")
+    print("Heyyyyyyyyyyyyyyyy4")
     pnp.place(block_poses[idx])
 
 # second block
 
     idx = idx + 1
     # while not rospy.is_shutdown():
-    print("\nPicking...")
+    print("Heyyyyyyyyyyyyyyyy0")
     pnp.pick(block_poses[idx])
 
+    # idx = idx + 1
+    # print("Heyyyyyyyyyyyyyyyy1")
+    # pnp._approach(block_poses[idx])
+
     idx = idx + 1
+    print("Heyyyyyyyyyyyyyyyy2")
     pnp._approach(block_poses[idx])
 
     idx = idx + 1
+    print("Heyyyyyyyyyyyyyyyy3")
     pnp._approach(block_poses[idx])
 
     idx = idx + 1
-    pnp._approach(block_poses[idx])
-
-    idx = idx + 1
-    print("\nPlacing...")
+    print("Heyyyyyyyyyyyyyyyy4")
     pnp.place(block_poses[idx])
 
 
